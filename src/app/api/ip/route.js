@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
-import { headers } from 'next/headers'
-import { getRequestContext } from '@cloudflare/next-on-pages';
+// import { NextResponse } from "next/server";
+// import { headers } from 'next/headers'
+// import { getRequestContext } from '@cloudflare/next-on-pages';
 
 // ...
 
@@ -30,13 +30,13 @@ export async function GET(request) {
 }
 
 
-async function insertImageData(env, src, referer, ip, rating, time) {
-  try {
-    const instdata = await env.prepare(
-      `INSERT INTO imginfo (url, referer, ip, rating, total, time)
-           VALUES ('${src}', '${referer}', '${ip}', ${rating}, 1, '${time}')`
-    ).run();
-  } catch (error) {
+// async function insertImageData(env, src, referer, ip, rating, time) {
+//   try {
+//     const instdata = await env.prepare(
+//       `INSERT INTO imginfo (url, referer, ip, rating, total, time)
+//            VALUES ('${src}', '${referer}', '${ip}', ${rating}, 1, '${time}')`
+//     ).run();
+//   } catch (error) {
 
-  }
-}
+//   }
+// }

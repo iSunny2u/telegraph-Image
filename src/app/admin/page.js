@@ -102,11 +102,14 @@ export default function Admin() {
     <>
       <div className="overflow-auto h-full flex w-full min-h-screen flex-col items-center justify-between">
         <header className="fixed top-0 h-[50px]  left-0 w-full border-b bg-white flex z-50 justify-center items-center">
-          <div className="flex justify-between items-center w-full max-w-4xl px-4">
+          <div className="flex justify-between flex-row items-center w-full max-w-4xl px-4">
             <button className='text-white px-4 py-2  transition ease-in-out delay-150 bg-blue-500 hover:scale-110 hover:bg-indigo-500 duration-300  rounded '
               onClick={handleViewToggle}>
               切换到 {view === 'list' ? '日志页' : '数据页'}
             </button>
+
+            <Link href="/manage"><button className="px-4 py-2 mx-2 w-28  sm:w-28 md:w-28 lg:w-28 xl:w-28  2xl:w-28 bg-blue-500 text-white rounded ">访问管理</button></Link>
+            
             <form onSubmit={handleSearch} className="hidden sm:flex items-center">
               <input
                 type="text"
